@@ -1,0 +1,38 @@
+.alert{
+	transition: all 1000ms;
+	animation: alert 1000ms linear;
+}
+@keyframes alert{
+	0%{
+		opacity: 0;
+		bottom: 1rem;
+	}
+	100%{
+		opacity: 1;
+		bottom: 0;
+	}
+}
+
+div.alert.alert-info>p{
+	position: relative;
+	animation: entrada 250ms linear;
+}
+@keyframes entrada{
+	0%{
+		opacity: 0;
+		top: -5px;
+	}
+	100%{
+		opacity: 1;
+		top: 0px;
+	}
+}
+
+.footer{
+	height: 6em;
+	width: 100vw;
+	padding: 1rem;
+}
+.footer>.container>.row>div{
+	margin-bottom: 1rem;
+}
