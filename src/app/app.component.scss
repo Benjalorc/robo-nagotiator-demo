@@ -1,3 +1,7 @@
+::ng-deep .material-icons {
+  font-family: 'Material Icons' !important;
+}
+
 .alert{
 	transition: all 1000ms;
 	animation: alert 1000ms linear;

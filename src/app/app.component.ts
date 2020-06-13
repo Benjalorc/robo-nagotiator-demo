@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
   title = 'robo-negotiator';
   alertPage: number = 1;
 
+  isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
