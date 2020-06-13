@@ -22,24 +22,100 @@
 <div class="row">
     <div class="col-12">
         <mat-horizontal-stepper [linear]="isLinear" #stepper>
-          <mat-step [stepControl]="firstFormGroup">
+          <mat-step>
             <form [formGroup]="firstFormGroup">
-              <ng-template matStepLabel>Fill out your name</ng-template>
-              <mat-form-field>
-                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-              </mat-form-field>
-              <div>
+              <ng-template matStepLabel>Product Information</ng-template>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                               <div class="form-group">
+                                                                    <select required="" name="category" onchange="setAttributes(this.value)" class="custom-select" style="display: block
+                                     !important;">
+                                     <option value="">Select Category *</option>
+                                     <option>Automobiles</option>
+                                     <option>Electronics</option>
+                                     <option>Appliances</option>
+                                     <option>Equity Offering</option>
+                                     <option>Miscellaneous</option>
+                                  </select>
+                               </div>
+                            </div>
+                            <div class="col-md-6">
+                               <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Product Title *" required="" value="" name="product_title">
+                               </div>
+                            </div>
+                            <div class="col-md-6">
+                               <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Product Code (UPC or SKU or  VIN) *" value="" required="" name="upc_product_code">
+                               </div>
+                            </div>
+                            <div class="col-md-6">
+                               <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="URL(More Information)
+                                     (Optional)" name="url" value="">
+                               </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <textarea class="form-control" required="" placeholder="Enter Some Product Description to Proceed" rows="5" id="product_description" name="product_description"></textarea>
+                              </div>
+                            </div>
+                            <!-- File Upload Section -->
+                            <div class="col-md-12">
+                               <p class="font-weight-bold pb-2">Upload 5-6 photos ( at least 1 photo is required)</p>
+                            </div>
+                            <div class="col-md-12">
+
+
+<span class="btn btn-default btn-file">
+<div class="file-input file-input-new">
+<div class="input-group ">
+
+   <div class="input-group-btn">
+       <div tabindex="500" >
+        <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
+        <button type="button" class="btn btn-primary btn-file" (click)="filePicker.nativeElement.click()">Browse …</button>
+        <input #FilePicker id="input-1" name="product_img[]" type="file" accept="image/*" multiple="" data-show-upload="true" data-show-caption="true" style="display: none;">
+    </div>
+   </div>
+</div></div>
+                                </span>
+
+
+                            </div>
+                        </div>
+                <div class="pull-right">
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+          </mat-step>
+          <mat-step>
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>Product Attributes</ng-template>
+
+              <div class="pull-right">
+                <button mat-button matStepperPrevious>Back</button>
                 <button mat-button matStepperNext>Next</button>
               </div>
             </form>
           </mat-step>
-          <mat-step [stepControl]="secondFormGroup">
+          <mat-step>
             <form [formGroup]="secondFormGroup">
-              <ng-template matStepLabel>Fill out your address</ng-template>
-              <mat-form-field>
-                <input matInput placeholder="Address" formControlName="secondCtrl" required>
-              </mat-form-field>
-              <div>
+              <ng-template matStepLabel>Deal Information</ng-template>
+
+              <div class="pull-right">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step>
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>Negotiation</ng-template>
+
+              <div class="pull-right">
                 <button mat-button matStepperPrevious>Back</button>
                 <button mat-button matStepperNext>Next</button>
               </div>

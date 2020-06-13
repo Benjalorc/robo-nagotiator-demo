@@ -9,6 +9,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class AppComponent implements OnInit{
 
   @ViewChild('AddInfo') addInfo: ElementRef;
+  @ViewChild('FilePicker') filePicker: ElementRef;
   title = 'robo-negotiator';
   alertPage: number = 1;
 
