@@ -143,10 +143,10 @@ span.hamb::after{top: 10px}
 	width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    z-index: 1000;
+    z-index: 1001;
     box-shadow: 5px 5px 10px;
     border: none;
-    transition: all 200ms;
+    transition: all 150ms;
 }
 .btn-side:hover{
     box-shadow: 5px 5px 10px;
