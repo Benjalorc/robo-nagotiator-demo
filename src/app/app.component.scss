@@ -46,6 +46,14 @@ div.alert.alert-info>p{
 	display: grid;
 	grid-gap: 1rem;
 }
+@media only screen and (max-width: 767px){
+
+	::ng-deep .myStepper .mat-vertical-content .row>*,
+	::ng-deep .myStepper .mat-vertical-content .row>*{
+		padding: 0 !important;
+	}
+
+}
 @media only screen and (min-width: 768px){
 	.footer{
 		grid-template-columns: 70% 1fr 1fr;
@@ -61,3 +69,7 @@ div.alert.alert-info>p{
 	}
 }
 
+.bulk-upload{
+	margin: 0 auto 1rem auto;
+    width: calc(100% - 3rem);
+}

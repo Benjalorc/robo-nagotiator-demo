@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class AppComponent implements OnInit{
 
-  @ViewChild('AddInfo') addInfo: ElementRef;
+  @ViewChild('AddInfo', {static: false}) addInfo: ElementRef;
   @ViewChild('FilePicker') filePicker: ElementRef;
   title = 'robo-negotiator';
   alertPage: number = 1;
@@ -17,15 +17,22 @@ export class AppComponent implements OnInit{
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
+  isSmall: boolean;
+
   constructor(private _formBuilder: FormBuilder) {}
 
   ngOnInit(){
+  	this.calcSize();
     this.firstFormGroup = this._formBuilder.group({
       firstCtrl: ['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
+  }
+
+  calcSize(){
+  	this.isSmall = window.innerWidth < 768 ? true : false;
   }
 
   setAlertPage(num){
