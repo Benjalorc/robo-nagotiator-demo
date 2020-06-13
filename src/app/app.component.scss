@@ -29,10 +29,19 @@ div.alert.alert-info>p{
 }
 
 .footer{
-	height: 6em;
+	display: grid;
 	width: 100vw;
-	padding: 1rem;
+	padding: 2rem;
+	text-align: center;
+	grid-row-gap: 2rem;
+	>a{
+		grid-column: 1/-1;
+		text-align: center;
+	}
 }
-.footer>.container>.row>div{
-	margin-bottom: 1rem;
+@media only screen and (min-width: 768px){
+	.footer{
+		grid-template-columns: 70% 1fr 1fr;
+		text-align: left;
+	}
 }
