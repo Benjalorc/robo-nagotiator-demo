@@ -42,9 +42,22 @@ div.alert.alert-info>p{
 		text-align: center;
 	}
 }
+.attr-grid{
+	display: grid;
+	grid-gap: 1rem;
+}
 @media only screen and (min-width: 768px){
 	.footer{
 		grid-template-columns: 70% 1fr 1fr;
 		text-align: left;
 	}
+	.attr-grid{
+		grid-template-columns: repeat(2, 1fr)
+	}
 }
+@media only screen and (min-width: 1024px){
+	.attr-grid{
+		grid-template-columns: repeat(3, 1fr)
+	}
+}
+

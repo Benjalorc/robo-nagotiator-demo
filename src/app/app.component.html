@@ -92,33 +92,13 @@
           <mat-step>
             <form [formGroup]="secondFormGroup">
               <ng-template matStepLabel>Product Attributes</ng-template>
-                    <div class="row">
-                            <div class="col-md-2">
-                               <div class="form-group">
-                                  <input type="text" class="form-control" id="attributeId_1" placeholder="Attribute 1 / Make  (Optional)" name="make" value="">
-                               </div>
-                            </div>
-                            <div class="col-md-2">
-                               <div class="form-group">
-                                  <input type="text" class="form-control" id="attributeId_2" placeholder="Attribute 2 / Model(Optional)" name="model" value="">
-                               </div>
-                            </div>
-                            <div class="col-md-2">
-                               <div class="form-group">
-                                  <input type="text" class="form-control" id="attributeId_3" placeholder="Attribute 3/Condition (Optional)" name="condition" value="">
-                               </div>
-                            </div>
-                            <div class="col-md-2">
-                               <div class="form-group">
-                                  <input type="text" class="form-control" id="attributeId_4" placeholder="Attribute 4/Color (Optional)" name="color" value="">
-                               </div>
-                            </div>
-                            <div class="col-md-2">
-                               <div class="form-group">
-                                  <input type="text" class="form-control" id="attributeId_5" placeholder="Attribute 5/Size (Optional)" name="size" value="">
-                               </div>
-                            </div>
-                          </div>
+                    <div class="row attr-grid">
+                        <input type="text" class="form-control" id="attributeId_1" placeholder="Attribute 1 / Make  (Optional)" name="make" value="">
+                        <input type="text" class="form-control" id="attributeId_2" placeholder="Attribute 2 / Model(Optional)" name="model" value="">
+                        <input type="text" class="form-control" id="attributeId_3" placeholder="Attribute 3/Condition (Optional)" name="condition" value="">
+                        <input type="text" class="form-control" id="attributeId_4" placeholder="Attribute 4/Color (Optional)" name="color" value="">
+                        <input type="text" class="form-control" id="attributeId_5" placeholder="Attribute 5/Size (Optional)" name="size" value="">
+                    </div>
               <div class="pull-right">
                 <button mat-button matStepperPrevious>Back</button>
                 <button mat-button matStepperNext>Next</button>
