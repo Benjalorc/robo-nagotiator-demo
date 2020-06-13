@@ -92,7 +92,27 @@ div.alert.alert-info>p{
 }
 
 .metismenu{
+
 	list-style-type: none;
+	padding: 16px 10px 0 16px;
+
+	>li{
+		font-size: 16px;
+		padding-top: 10px;
+		transition: 150ms;
+		a{
+			color: #fff !important;
+		}
+		&:hover{
+			background: #f9f9f9;
+			a{
+				color: #000 !important;
+			}
+		}
+	}
+}
+.main-menu.bg-dark{
+	height: 100%;
 }
 
 span.hamb{
