@@ -1,3 +1,56 @@
+<button type="button" class="btn btn-round bg-white btn-side" (click)="toggleSide()">
+    <span class="hamb"></span>
+</button>
+<div class="sidebar-menu" #SideMenu>
+    <div class="sidebar-header bg-secondary">
+        <div class="logo">
+            <a href="http://my.robonegotiator.com"><img src="assets/logo.png" class="img-reponsive" alt="logo" width="500px;"></a>
+        </div>
+    </div>
+    <div class="main-menu bg-dark">
+        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 352px;"><div class="menu-inner" style="overflow: hidden; width: auto; height: 352px;">
+            <nav>
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a href="http://my.robonegotiator.com/dashboard" aria-expanded="true"><i class="ti-home"></i><span>dashboard</span></a>
+                       </li>
+                    <li class="active">
+                        <a href="http://my.robonegotiator.com/upload-a-deal" aria-expanded="true"><i class="fa fa-upload" aria-hidden="true"></i><span>
+                            Upload Product &amp; Deal
+                            </span></a>
+                    </li>
+                    <li>
+                        <a href="http://my.robonegotiator.com/add-product-discount" aria-expanded="true"><i class="fa fa-list-ul" aria-hidden="true"></i><span>
+                        Set Discounts/Rebates
+                        </span></a>
+                    </li>
+                    <li>
+                        <a href="http://my.robonegotiator.com/set-rules" aria-expanded="true"><i class="ti-pie-chart"></i><span>Set Negotiation Parameters /Rules</span></a>
+                    </li>
+                    <!-- <li>
+                        <a href="#" aria-expanded="true"><i class="fa fa-bar-chart"></i><span>Deal Progress/ Results</span></a>
+                    </li> -->
+                    <li>
+                        <a href="http://my.robonegotiator.com/manage-products" aria-expanded="true"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>Manage deals</span></a>
+                    </li>
+                    <li>
+                        <a href="#" aria-expanded="true"><i class="fa fa-key" aria-hidden="true"></i><span>Get API Key</span></a>
+                    </li>
+                    <li>
+                        <a href="#" aria-expanded="true"><i class="fa fa-cogs" aria-hidden="true"></i><span>My Plugin Settings</span></a>
+                    </li>
+                    <li>
+                        <a href="http://my.robonegotiator.com/customer" aria-expanded="true"><i class="fa fa-user" aria-hidden="true"></i><span>Customer Profile</span></a>
+                    </li>
+                    <li>
+                        <a href="http://my.robonegotiator.com/logout" aria-expanded="true"><i class="fa fa-sign-out" aria-hidden="true"></i><span>Logout</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 252.865px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    </div>
+</div>
+
 <ng-template #Step1>
 
 <div class="row">

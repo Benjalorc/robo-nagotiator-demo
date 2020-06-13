@@ -73,3 +73,65 @@ div.alert.alert-info>p{
 	margin: 0 auto 1rem auto;
     width: calc(100% - 3rem);
 }
+
+.sidebar-menu{
+	position: fixed;
+	top: 0;
+	left: -300px;
+	width: 300px;
+	height: 100vh;
+	transition: 250ms;
+	z-index: 1000;
+}
+.sidebar-menu.open{
+	left: 0;
+}
+.img-reponsive{
+	width: 100%;
+	height: auto;
+}
+
+.metismenu{
+	list-style-type: none;
+}
+
+span.hamb{
+	display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    height: 3px;
+    width: 30px;
+    background: #000;
+}
+span.hamb::before,
+span.hamb::after{
+	position: absolute;
+	content: '';
+    right: 0;
+    height: 3px;
+    width: 30px;
+    background: #000;
+}
+span.hamb::before{top: -10px}
+span.hamb::after{top: 10px}
+
+.btn-side{
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 5px 5px 10px;
+    border: none;
+    transition: all 200ms;
+}
+.btn-side:hover{
+    box-shadow: 5px 5px 10px;
+}
+.btn-side:active{
+    box-shadow: 5px 5px 10px;
+    right: 2rem; bottom: 2rem;
+}
