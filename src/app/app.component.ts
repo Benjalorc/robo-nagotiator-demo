@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,18 @@ export class AppComponent implements OnInit{
   title = 'robo-negotiator';
   alertPage: number = 1;
 
-  ngOnInit(){
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
 
+  constructor(private _formBuilder: FormBuilder) {}
+
+  ngOnInit(){
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
   }
 
   setAlertPage(num){
