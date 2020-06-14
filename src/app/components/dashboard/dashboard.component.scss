@@ -1,0 +1,95 @@
+.container.selection{
+	display: grid;
+	padding: 2rem;
+	>.selector{
+		display: grid;
+		align-self: center;
+		>mat-form-field{ margin: auto; }
+	}
+	>*{
+	  display: flex;
+	  justify-content: center;
+	}
+}
+.container.grid{
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: 100%;
+	grid-auto-rows: 500px;
+	grid-template-areas:
+		"market"
+		"offers"
+		"closing"
+		"output";
+	padding: 2rem 0;
+
+	.market-data{ grid-area: market; }
+	.offers{ grid-area: offers; }
+	.closing{ grid-area: closing; }
+	.output-data{ grid-area: output; }
+
+	.market-data, .offers,
+	.closing, .output-data{
+		display: grid;
+		grid-template-rows: 50px 450px;
+		background-color: #fff;
+		box-shadow:
+			0 2px 1px -1px rgba(0,0,0,.2),
+			0 1px 1px 0 rgba(0,0,0,.14),
+			0 1px 3px 0 rgba(0,0,0,.12);
+
+		>div.place{
+			width: 100%;
+			max-width: calc(100vw - 1rem);
+		}
+	}
+
+	>div>h2{
+		padding-left: 2rem;
+		margin: auto 0 0 0;
+	}
+}
+
+
+@media only screen and (min-width: 768px){
+	.container.grid{
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"offers offers"
+			"market output"
+			"closing closing";
+	}
+	.container.selection{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (min-width: 1280px){
+
+	.container.grid{
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"market offers offers"
+			"closing closing output";
+
+		>.offers{
+			grid-column: 2/4;
+		}
+	}
+
+	.container.selection{
+		grid-template-columns: repeat(3, 1fr);
+
+		>.selector{
+			grid-column: span 1;
+		}
+		>.selected{
+			grid-column: span 2;
+		}
+	}
+}
+
+.image-responsive{
+	height: 100%;
+	width: auto;
+}

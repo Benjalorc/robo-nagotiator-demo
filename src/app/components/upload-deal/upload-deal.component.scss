@@ -1,0 +1,75 @@
+::ng-deep .material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+.alert{
+	transition: all 1000ms;
+	animation: alert 1000ms linear;
+}
+@keyframes alert{
+	0%{
+		opacity: 0;
+		bottom: 1rem;
+	}
+	100%{
+		opacity: 1;
+		bottom: 0;
+	}
+}
+
+div.alert.alert-info>p{
+	position: relative;
+	animation: entrada 250ms linear;
+}
+@keyframes entrada{
+	0%{
+		opacity: 0;
+		top: -5px;
+	}
+	100%{
+		opacity: 1;
+		top: 0px;
+	}
+}
+
+.footer{
+	display: grid;
+	padding: 2rem;
+	text-align: center;
+	grid-row-gap: 2rem;
+	>a{
+		grid-column: 1/-1;
+		text-align: center;
+	}
+}
+.attr-grid{
+	display: grid;
+	grid-gap: 1rem;
+}
+@media only screen and (max-width: 767px){
+
+	::ng-deep .myStepper .mat-vertical-content .row>*,
+	::ng-deep .myStepper .mat-vertical-content .row>*{
+		padding: 0 !important;
+	}
+
+}
+@media only screen and (min-width: 768px){
+	.footer{
+		grid-template-columns: 70% 1fr 1fr;
+		text-align: left;
+	}
+	.attr-grid{
+		grid-template-columns: repeat(2, 1fr)
+	}
+}
+@media only screen and (min-width: 1024px){
+	.attr-grid{
+		grid-template-columns: repeat(3, 1fr)
+	}
+}
+
+.bulk-upload{
+	margin: 0 auto 1rem auto;
+    width: calc(100% - 3rem);
+}

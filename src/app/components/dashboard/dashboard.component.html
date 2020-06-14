@@ -1,0 +1,50 @@
+<div class="container selection">
+
+	<div class="selector">
+		<h2>Select Product</h2>
+		<mat-form-field>
+		  <mat-label>Products</mat-label>
+		  <mat-select [(ngModel)]="selected" (selectionChange)="setActive(selected)">
+		    <mat-option *ngFor="let product of products" [value]="product.name">
+		      {{product.name}}
+		    </mat-option>
+		</mat-select>
+		</mat-form-field>
+	</div>
+	<div class="selected">
+		<img class="image-responsive" src="https://via.placeholder.com/250">
+	</div>
+
+</div>
+
+<div *ngIf="active" class="container grid" (window:resize)="calcSize();">
+
+	<div class="market-data">
+		<h2>Market Data</h2>
+		<div class="place">
+			<canvas height="450" id="marketDataPrice"></canvas>
+		</div>
+	</div>
+
+	<div class="offers">
+		<h2>Offers Info</h2>
+		<div class="place">
+			<canvas height="450" id="offersPrice"></canvas>
+		</div>
+	</div>
+
+	<div class="closing">
+		<h2>Deal Inteligence Closed</h2>
+		<div class="place">
+			<canvas height="450" id="closingOrientation"></canvas>
+		</div>
+	</div>
+
+	<div class="output-data">
+		<h2>Deal Inteligence Output</h2>
+		<div class="place">
+			<canvas height="450" id="outputData"></canvas>
+		</div>
+	</div>
+
+</div>
